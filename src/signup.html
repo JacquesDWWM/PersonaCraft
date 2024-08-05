@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | PersonaCraft</title>
+    <meta name="description" content="Créer un site web pour son entreprise n'a jamais été aussi simple comme bonjour ! Grâce à PersonaCraft, profitez d'une interface créée par nos soins pour vous faciliter la conception sans code.">
+    <meta name="keywords" content="personacraft, persona, craft,  interface, web, site, entreprise, conception, code, créer">
+    <meta name="author" content="Utopixia">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="fr">
+    <link rel="stylesheet" href="../Style/signup.css">
+</head>
+<body>
+    <section class="heroSection">
+        <!-- navbar -->
+        <nav class="navbar">
+            <div class="menu">
+                    <div class="logo"><a href="./index.html">PersonaCraft</a></div>
+                <ul>
+                    <li><a href="./produits.html">Produits</a></li>
+                    <li><a href="./solutions.html">Solutions</a></li>
+                    <li><a href="./entreprise.html">Entreprise</a></li>
+                    <li><a href="./tarifs.html">Tarifs</a></li>
+                </ul>
+            </div>
+            <div>
+                <a href="./signin.html"><button class="button">Se connecter</button></a><a href="./signup.html"><button class="button">S'inscrire</button></a>
+                <div class="burger"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#B2B3BD"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></div>
+            </div>
+        </nav> 
+    </section>
+    <section class="form">
+        <h1>Sign up</h1>
+        <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Nom" required>
+        </div><div class="form-group">
+            <label for="firstname">Prénom :</label>
+            <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" id="email" name="email" placeholder="Adresse e-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" placeholder="**********" required>
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirmer le mot de passe :</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="**********" required>
+        </div>
+        <button class="button" type="submit">S'inscrire</button>
+    </section>
+    <footer>
+        <div class="footerContent">
+            <div><p><a href="#">Gestion des cookies</a></p>
+            <p><a href="#">Politique de confidentialité</a></p>
+            <p><a href="#">Mentions légales</a></p></div>
+            <p>© 2024 PersonaCraft by Utopixia</p>
+        </div>
+    </footer>
+</body>
+</html>
