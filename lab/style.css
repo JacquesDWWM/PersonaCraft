@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&display=swap');
+:root{
+    --font-family: 'Noto-Sans-Georgian', Arial, Helvetica, sans-serif;
+    --button-color : #3D63DD;
+    --button-color-hover : #3F5CB0;
+    --button-color-hover-shadow : 0px 3px 50px 5px #3d63dd80;
+    --main-bg-color : #111113;
+    --main-text-color : #eeeef0;
+    --main-text-color2 : #B2B3BD;
+    --main-text-surlign : #93B4FF;
+    --main-border-color : #393A40;
+    --main-font-size : 1rem;
+    --main-button-padding : 10px 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+body{
+    background-color: var(--main-bg-color);
+    height: 100vb;
+    /* max-height: 100vh; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--main-text-color);
+    font-family: var(--font-family);
+    font-size: var(--main-font-size);
+}
+main{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+/* class button */
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: var(--main-button-padding);
+    background-color: var(--button-color);
+    text-decoration: none;
+    border: none;
+    font-size: var(--main-font-size);
+    border-radius: 5px;
+    color: var(--main-text-color);
+    transition: all 0.2s ease;
+}
+/* header */
+header{
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    padding-right: 20px;
+    z-index: 100;
+}
+header .logo{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: fit-content;
+    margin: 0 20px;
+    padding-right: 20px;
+    font-size: 2rem;
+}
+.websiteName{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid var(--main-text-color2);
+    border-radius: 25px;
+}
+#websiteName{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--main-text-color2);
+    font-size: 1rem;
+    padding:  7.5px 10px;
+    text-align: center;
+}
+#websiteName:focus{
+    color: var(--main-text-color);
+}
+.previewButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#vue{
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    border: none;
+    color: var(--main-text-color2);
+}
+#vue:focus{
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+}
+.saveButton{
+    cursor: pointer;
+}
+/* section */
+.container{
+    background-color: var(--main-text-color2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    width: 75px;
+    height: 100%;
+    padding: 10px 0;
+    background-color: #393A40;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+.menuButton{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.menuButton button{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: inherit;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2.5px solid transparent;
+    cursor: pointer;
+}
+.hiddenMenu{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-text-color2);
+    width: 300px;
+    height: calc(100vh - 50px);
+    top: 50px;
+    left: 75px;
+    transition: all 0.2s ease;
+    padding: 20px 15px;
+}
+.hidden{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    /* border: 1px solid var(--main-bg-color); */
+}
+.hidden h3, p{
+    margin: 10px 0 10px;
+}
+.pageMenu, .seoMenu, .designMenu, .library{
+    display: none;
+}
+.language{
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: transparent;
+    font-size: 1rem;
+    border: 1px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+}
+.separator{
+    display: block;
+    margin: 20px 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-bg-color);
+}
+.content{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    background-color: #393A40;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    overflow-y: scroll;
+}
+.content iframe{
+    display: block;
+    width: 1024px;
+    height: calc(100vh - 50px);
+    /* border: 1px solid var(--main-text-color2); */
+    transition: all 0.2s ease;
+}
