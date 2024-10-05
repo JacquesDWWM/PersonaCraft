@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin | PersonaCraft</title>
+    <script src="../script/admin.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+    <link rel="stylesheet" href="../style/admin.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu">
+                <div class="logo"><a href="./index.html"><span class="material-symbols-outlined logo-icon">dashboard_2</span>Centre de l'admini-craftor 🤖</a></div>
+                <div class="user-header-infos"><div id="connected-user"></div>
+            </div>
+        </div>
+    </nav>
+    <!-- Input de recherche -->
+    <section id="search">
+    <input type="text" id="searchInput" placeholder="Rechercher un utilisateur...">
+    <div>
+    <label for="sortSelect">Trier par :</label>
+    <select id="sortSelect">
+        <option value="username">Nom (A-Z)</option>
+        <option value="email">Email (A-Z)</option>
+        <option value="created_at">Date de création (récent)</option>
+        <option value="updated_at">Date de mise à jour (récent)</option>
+    </select>
+    </div>
+</section>
+    <!-- Tableau des utilisateurs -->
+     <section id="result">
+    <table id="usersTable">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th style="text-overflow: ellipsis;" id="password" >Password (hash)</th>
+                <th>Roles</th>
+                <th>Date de création</th>
+                <th>Date de mise à jour</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les utilisateurs seront injectés ici -->
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

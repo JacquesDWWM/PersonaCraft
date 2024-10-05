@@ -63,6 +63,7 @@ header{
     backdrop-filter: blur(5px);
     padding-right: 20px;
     z-index: 100;
+    border-bottom: 1px solid var(--main-border-color);
 }
 header .logo{
     display: flex;
@@ -125,57 +126,72 @@ header .logo{
     justify-content: center;
     align-items: center;
 }
+/* side menu */
 .menu{
-    width: 75px;
+    width: 50px;
     height: 100%;
-    padding: 10px 0;
-    background-color: #393A40;
+    background-color: var(--main-bg-color);
     display: flex;
+    align-self: center;
     flex-direction: column;
-    /* justify-content: center; */
+    float: left;
+    border-right: 1px solid var(--main-border-color);
 }
 .menuButton{
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    gap: 10px;
 }
 .menuButton button{
     width: 50px;
     height: 50px;
     display: flex;
-    position: inherit;
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 2.5px solid transparent;
+    border: transparent;
     cursor: pointer;
 }
 .hiddenMenu{
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
-    background-color: var(--main-text-color2);
+    background-color: var(--main-bg-color);
     width: 300px;
     height: calc(100vh - 50px);
     top: 50px;
-    left: 75px;
+    left: 50px;
     transition: all 0.2s ease;
-    padding: 20px 15px;
 }
 .hidden{
     width: 100%;
     height: 100%;
-    padding: 10px;
+    display: none;
+    justify-content: center;
     /* border: 1px solid var(--main-bg-color); */
 }
 .hidden h3, p{
-    margin: 10px 0 10px;
+    margin: 10px;
 }
-.pageMenu, .seoMenu, .designMenu, .library{
+.pageMenu, .seoMenu, .designMenu, .libraryMenu, .addMenu, .settingsMenu{
     display: none;
+    justify-content: center;
+
+    width: 100%;
+    gap: 10px;
+}
+#newFolder, #newPage{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-text-color2);
+    border: 1px solid var(--main-border-color);
+    cursor: pointer;
 }
 .language{
     width: fit-content;
@@ -187,21 +203,21 @@ header .logo{
 }
 .separator{
     display: block;
-    margin: 20px 0;
+    margin: 15px 0;
     width: 100%;
     height: 2px;
-    background-color: var(--main-bg-color);
+    background-color: var(--main-border-color);
 }
+/* zone contenu / iframe */
 .content{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
-    background-color: #393A40;
+    background-color: var(--main-text-color);
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     overflow-y: scroll;
 }
@@ -209,6 +225,97 @@ header .logo{
     display: block;
     width: 1024px;
     height: calc(100vh - 50px);
-    /* border: 1px solid var(--main-text-color2); */
     transition: all 0.2s ease;
+    cursor: grab;
 }
+.settingMenu{
+    height: 100vh;
+    min-width: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    border-left: 1px solid var(--main-border-color);
+}
+.size{
+    padding: 0 20px 0 10px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.setting{
+    width: 125px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+.setting input{
+    width: 60px;
+    border-radius: 5px;
+    padding: 2.5px;
+    color: var(--main-text-color2);
+    background-color: var(--main-border-color);
+    border: 1px solid var(--main-text-color2);
+}
+.setting input:focus{
+    color: var(--main-text-color);
+    background-color: var(--main-bg-color);
+    outline: none;
+}
+/*  */
+
+.rSideMenu {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 10px;
+}
+.material-symbols-outlined {
+    transform: rotate(-90deg);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.material-symbols-outlined:hover {
+    color: var(--main-text-color);
+}
+
+.margin,.padding{
+    width: 100%;
+    display: flex;
+    /* margin: 0 10px; */
+    padding: 0 10px;
+}
+.margin fieldset,.padding fieldset{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+.margin fieldset legend, .padding fieldset legend{
+    padding: 3px 6px;
+}
+.sizeContainer, .spacingContainer, .typoContainer, .backgroundContainer, .borderContainer, .positionContainer {
+    overflow: hidden;
+    height: 20px;
+}
+.sizeContainer.open, .spacingContainer.open, .typoContainer.open, .backgroundContainer.open, .borderContainer.open, .positionContainer.open {
+    height: auto;
+}
+.sizeContainer p, .spacingContainer p, .typoContainer p, .backgroundContainer p, .borderContainer p, .positionContainer p {
+    font-size: 0.9rem;
+}
+
+.typoContainer.open .material-symbols-outlined, .sizeContainer.open .material-symbols-outlined, .spacingContainer.open .material-symbols-outlined, .backgroundContainer.open .material-symbols-outlined, .borderContainer.open .material-symbols-outlined, .positionContainer.open .material-symbols-outlined {
+    transform: rotate(0deg); /* Rotation de l'icône quand le menu est déplié */
+} 

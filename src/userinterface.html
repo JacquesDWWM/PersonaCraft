@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User interface | PersonaCraft</title>
+    <script src="../script/userinterface.js" defer></script>
+    <link rel="stylesheet" href="../style/userinterface.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu">
+                <div class="logo"><a href="./index.html"><span class="material-symbols-outlined logo-icon">dashboard_2</span>Craft-board</a></div>
+                <div class="user-header-infos"><div id="connected-user"></div>
+                <!-- <span id="user-notification" class="material-symbols-outlined">notifications</span> -->
+            </div>
+        </div>
+    </nav>
+    <section id="content-user">
+        <!-- <h1>🥳 Bienvenue sur votre espace utilisateur PersonaCraft 🥳</h1> -->
+        <div id="content-container">
+            <aside class="left-pannel">
+                <h3>Tableau de bord</h3>
+                <ul>
+                    <li data-target="content-sites">
+                        <span class="material-symbols-outlined">home_storage</span>
+                        <p>Mes sites</p>
+                    </li>
+                </ul>
+                <h3>Mon compte</h3>
+                <ul>
+                    <li data-target="profile-setting"><span class="material-symbols-outlined">person</span>
+                        <p>Profil</p>
+                    </li>
+                    <li data-target="account-setting"><span class="material-symbols-outlined">settings_account_box</span>
+                        <p>Compte</p>
+                    </li>
+                </ul>
+                <h3>Paramètres</h3>
+                <ul>
+                    <li data-target="general-setting">
+                        <span class="material-symbols-outlined">tune</span>
+                        <p>Général</p>
+                    </li>
+                    <li data-target="formula-setting">
+                        <span class="material-symbols-outlined">shoppingmode</span>
+                        <p>Formule</p>
+                    </li>
+                    <li data-target="facturation-setting">
+                        <span class="material-symbols-outlined">receipt_long</span>
+                        <p>Facturation</p>
+                    </li>
+                </ul>
+                <div class="separator"></div>
+                <ul>
+                    <li id="logout"><span class="material-symbols-outlined">logout</span>
+                        <p>Se déconnecter</p>
+                    </li>
+                </ul>
+            </aside>
+            <main class="right-pannel">
+                <!-- Tableau de bord -->
+                <div id="content-sites" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">Mes sites</h2>
+                        <button class="create-site button">Créer un site<span class="material-symbols-outlined">add</span></button>
+                    </div>
+                    <div class="content-section-content">
+                        <div class="site-card">
+                            <div class="site-card-container">
+                                <h3 class="site-card-title">Site 1</h3>
+                                
+                                <div class="site-card-actions">
+                                    <button class="material-symbols-outlined site-card-setting">settings</button>
+                                    <button class="material-symbols-outlined site-card-edit">edit</button>
+                                    <button class="material-symbols-outlined site-card-delete">delete</button>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </div>
+                <!-- Mon compte -->
+                <div id="profile-setting" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">Mon profil</h2>
+                        <div id="head-buttons">
+                        <button class="cancel button"><span class="material-symbols-outlined">cancel</span></button>
+                        <button class="save button"><span class="material-symbols-outlined">save</span></button>
+                        </div>
+                    </div>
+                    <div class="content-section-content">
+                        <h3>Général</h3>
+                        <div>
+                            <h4>Nom d'utilisateur:*</h4>
+                            <input type="text" id="nom-utilisateur" name="nom-utilisateur" placeholder="Nom complet">
+                            <span class="note">Pseudonyme affiché sur ton profil public et privé</span>
+                        </div>
+                        <div>
+                            <h4>Avatar:*</h4>
+                            <div id="avatar-img" title="avatar"></div>
+                            <button class="button" id="avatar" accept="JPG, PNG, GIF, WEBP">Upload<span class="material-symbols-outlined" style="color:#fff;">upload</span></button>
+                            <span class="note">Avatar affiché sur ton profil public et privé. Résolution maximale: 256x256px. Formats supportés: jpg, png, gif, webp.</span>
+                        </div>
+                        <div class="separator"></div>
+                        <h3>Autres informations</h3>
+                        <div>
+                            <h4>Nom:*</h4>
+                            <input type="text" id="nom" name="nom" placeholder="Nom">
+                            <h4>Prenom:*</h4>
+                            <input type="text" id="prenom" name="prénom" placeholder="Nom complet">
+                        </div>
+                        <div>
+                            <h4>Adresse:*</h4>
+                            <input type="text" id="adresse" name="nom-utilisateur" placeholder="Exemple : 12 rue de la fontaine">
+                            <h4>Complément d'adresse:</h4>
+                            <input type="text" id="complement-adresse" name="complément-adresse" placeholder="Exemple : Appartement 123">
+                        </div>
+                        <div>
+                            <h4>Ville:*</h4>
+                            <input type="text" id="ville" name="ville" placeholder="Ville">
+                            <h4>Code postal:*</h4>
+                            <input type="text" id="code-postal" name="code-postal" placeholder="Code postal">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div id="account-setting" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">compte</h2>
+                        <button class="save button"><span class="material-symbols-outlined">save</span></button>
+                    </div>
+                </div> 
+                <!-- Paramètres -->
+                <div id="general-setting" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">Paramètres généraux</h2>
+                        <button class="save button"><span class="material-symbols-outlined">save</span></button>
+                    </div>
+                </div>
+                <div id="formula-setting" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">Formule</h2>
+                    </div>
+                </div>
+                <div id="facturation-setting" class="content-section">
+                    <div class="content-section-head">
+                        <h2 class="content-section-title">Facturation</h2>
+                        <button class="save button"><span class="material-symbols-outlined">save</span></button>
+                    </div>
+                    <div class="content-section-content">
+                        <h4>Paramètres de facturation</h4>
+                        <div>
+                            <label for="">Email de facturation :</label>
+                            <input type="email" id="email-facturation" name="email-facturation" placeholder="Email de facturation">
+                        </div>
+                        <div class="separator"></div>
+                        <h4>Autres paramètres</h4>
+                        <div class="separator"></div>
+                        <h4>Méthode de paiement</h4>
+                        <div id="paiement-container">
+                            <div id="paiement-content"></div>
+                            <button class="button">Ajouter un nouveau moyen de paiement<span class="material-symbols-outlined">add</span></button></div>
+                    </div>
+                </div>
+                
+            </main>
+        </div>
+        
+
+    </section>
+</body>
+</html>

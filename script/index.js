@@ -1,60 +1,40 @@
-const sign = document.querySelector('#sign');
-const log = document.querySelector('#log');
-const popLog = document.querySelector('#pop-log');
-const cardLog = document.querySelector('#card-log');
-const remove = document.querySelector('#remove');
-const burger = document.querySelector('#burger');
-const remover = document.querySelector('#remover');
-const menupop = document.querySelector('#menupop');
+document.addEventListener('DOMContentLoaded', function () {
+    const token = localStorage.getItem('token');
 
-// apparition pop up pour inscription
-sign.addEventListener('click', (e) => {
-    e.preventDefault();
-    popLog.style.display = 'flex';
-});
-// apparition pop up pour login
-log.addEventListener('click', (e) => {
-    e.preventDefault();
-    popLog.style.display = 'flex';
-});
-//  retrait du pop up pour inscription
-remove.addEventListener('click', (e) => {
-    e.preventDefault();
-    popLog.style.display = 'none';
-});
+    if (token) {
+        // Décoder le token JWT pour récupérer les infos
+        const payloadBase64 = token.split('.')[1];  // La deuxième partie du JWT est le payload
+        const decodedPayload = JSON.parse(atob(payloadBase64));  // Décoder en JSON
 
-burger.addEventListener('click', () => {
-    menupop.style.display = 'flex';
-});
+        // Récupérer le rôle de l'utilisateur à partir du token
+        const userRole = decodedPayload.role;
 
-remover.addEventListener('click', () => {
-    menupop.style.display = 'none';
-})
+        // Masquer les boutons d'authentification
+        document.getElementById('auth-buttons').style.display = 'none';
 
-// Partie sign up
-
-
-document.querySelector('#signupForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const fullname = document.querySelector('#fullname').value;
-    const mail = document.querySelector('#mail').value;
-    const password = document.querySelector('#password').value;
-
-    const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ fullname, mail, password })
-    })
-
-    .then(response => response.json());
-
-    if (response.ok) {
-        console.log('Inscription réussie');
-    } else {
-        console.log('Erreur lors de l\'inscription');
+        // Afficher le bouton approprié en fonction du rôle de l'utilisateur
+        if (userRole === 'admin') {
+            document.getElementById('admin-button').style.display = 'block';  // Afficher le bouton admin
+        } else {
+            document.getElementById('dashboard-button').style.display = 'block';  // Afficher le bouton dashboard pour les users normaux
+        }
     }
 });
 
 
+const menuPopOver = document.getElementById('menuPopOver');
+const burger = document.getElementById('burger');
+
+// Afficher le menu déroulant
+burger.addEventListener('click', () => {
+    if (menuPopOver.style.display === 'none') {
+    menuPopOver.style.display = 'flex';
+    burger.innerHTML = 'close';
+    burger.style.transform = 'rotate(180deg)';
+    }else{
+        menuPopOver.style.display = 'none';
+        burger.innerHTML = 'menu';
+        burger.style.transform = 'rotate(0deg)';
+    }
+}
+);

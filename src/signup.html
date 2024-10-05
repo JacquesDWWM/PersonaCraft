@@ -10,6 +10,8 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="fr">
     <link rel="stylesheet" href="../style/signup.css">
+    <script src="../script/signup.js" defer></script>
+
 </head>
 <body>
     <section class="heroSection">
@@ -23,19 +25,17 @@
                 </ul>
             </div>
             <div>
-                <a href="./signin.html"><button class="button">Se connecter</button></a><a href="./signup.html"><button class="button">S'inscrire</button></a>
+                <a href="./signin.html"><button class="button">Se connecter</button></a>
                 <div class="burger"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#B2B3BD"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></div>
             </div>
         </nav> 
     </section>
     <section class="form">
         <h1>Sign up</h1>
+        <form id="form">
         <div class="form-group">
             <label for="name">Nom :</label>
             <input type="text" id="name" name="name" placeholder="Nom" required>
-        </div><div class="form-group">
-            <label for="firstname">Prénom :</label>
-            <input type="text" id="firstname" name="firstname" placeholder="Prénom" required>
         </div>
         <div class="form-group">
             <label for="email">Adresse e-mail :</label>
@@ -45,11 +45,8 @@
             <label for="password">Mot de passe :</label>
             <input type="password" id="password" name="password" placeholder="**********" minlength="9" required>
         </div>
-        <div class="form-group">
-            <label for="confirm-password">Confirmer le mot de passe :</label>
-            <input type="password" id="confirm-password" name="confirm-password" placeholder="**********" required>
-        </div>
-        <button class="button" type="submit">S'inscrire</button>
+        <button class="button" id="submit" type="submit">S'inscrire</button>
+    </form>
     </section>
     <footer>
         <div class="footerContent">

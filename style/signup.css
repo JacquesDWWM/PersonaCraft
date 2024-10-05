@@ -155,7 +155,7 @@ a{
     
 }
 .form button {
-    margin-top: 50px;
+    margin: 50px auto 0;
 }
 label {
     width: 40%;
@@ -180,7 +180,7 @@ input[type="text"] {
 input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="text"]:focus {
-    outline: 1px solid --button-color;
+    outline: 1px solid var(--button-color);
 }
 /* footer */
 footer{
