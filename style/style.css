@@ -7,20 +7,6 @@
     --button-color-hover-shadow2 : 0px 0px 30px 15px #3d63dd80;
     --main-bg-color1: #111113;
     --main-bg-color : linear-gradient(to left top, #172448, #18203e, #181d33, #17192a, #151620, #151620, #151620, #151620, #17192a, #181d33, #18203e, #172448);
-    /* --main-bg-color-gradient:
-    radial-gradient(300px circle at 73% 60%, rgba(23,36,72,.8),rgba(23,36,72,0)),
-    radial-gradient(280px circle at 52% 70%, rgba(24,32,62,.95),rgba(24,32,62,0)),
-    radial-gradient(421px circle at 82% 82%, rgba(24,29,51,.95),rgba(24,29,51,0)),
-    radial-gradient(450px circle at 42% 65%, rgba(23,25,42,1),rgba(23,25,42,0)),
-    radial-gradient(480px circle at 40% 75%, rgba(23,25,42,1),rgba(23,25,42,0)),
-    radial-gradient(480px circle at 38% 95%, rgba(23,25,42,1),rgba(23,25,42,0)),
-    radial-gradient(435px circle at 65% 73%, rgba(21,22,32,1), rgba(21,22,32,0)),
-    radial-gradient(850px circle at right top, rgba(21,22,32,1), rgba(21,22,32,.9), rgba(21,22,32,.4), rgba(21,22,32,0)),
-    radial-gradient(422px circle at right 75%, rgba(21,22,32,.95), rgba(21,22,32,0)),
-    radial-gradient(350px circle at right 50%, rgba(21,22,32,1), rgba(21,22,32,0)),
-    radial-gradient(300px circle at right bottom, rgba(21,22,32,1), rgba(21,22,32,0)),
-    linear-gradient(to right bottom, #17192a00, rgba(23,25,42,.95) 40%, rgba(23,25,42,.5) 60%, rgba(23,25,42,0)),
-    linear-gradient(to right, #172448, #151620); */
     --main-text-color : #eeeef0;
     --main-text-color2 : #B2B3BD;
     --main-text-surlign : #93B4FF;
@@ -30,6 +16,7 @@
     --responsive-width : clamp(480px, 1440px, 1920px);
     --responsive-title : clamp(2em, 4em, 6em);
     --responsive-text : clamp(1rem, 1.25rem, 3rem);
+    --padding-section: 10vh 0;
 }
 /* global */
 *{
@@ -191,12 +178,14 @@ a{
 .media{
     background: var(--main-bg-color1);
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;    
+    margin-bottom: 5vh;
+    padding: var(--padding-section);
 }
+
 .representation{
     width: var(--responsive-width);
     height: 100%;
@@ -207,9 +196,10 @@ a{
     background-repeat: no-repeat;
     justify-content: center;
     display: flex;
-    align-items: center;
     box-shadow: var(--button-color-hover-shadow);
+    align-items: center;
 }
+
 /* section trust proof / logos */
 .trustProof{
     background-color: var(--main-bg-color1);
@@ -222,6 +212,7 @@ a{
     white-space: nowrap;
     box-sizing: border-box;
     z-index: 1;
+    padding: var(--padding-section);
 }
 .proof{
     display: flex;
@@ -261,7 +252,15 @@ a{
     justify-content: center;
     width: 100%;
     height: 40vh;
-    margin: 0 auto;
+    padding: var(--padding-section);
+    flex-direction: column;
+}
+.midSection1 h2{
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 3.75rem;
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 .content1{
     display: flex;
@@ -270,6 +269,7 @@ a{
     align-items: center;
     width: var(--responsive-width);
     height: auto;
+    margin: 0 auto;
     gap: 50px;
 }
 .card{
@@ -334,15 +334,27 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: var(--responsive-width);
     margin: 0 auto;
     height: auto;
-    /* padding: 50px 0; */
+    padding: var(--padding-section);
     gap: 50px;
     /* border-top: 1px solid var(--main-border-color); */
 }
+.avisSection h2{
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 3.75rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.avisContent{
+    display: flex;
+    justify-content: space-between;
+}
 .avisCard{
-    width: auto;
+    width: 45%;
     height: fit-content;
     border: 1px solid var(--main-border-color);
     display: flex;
@@ -392,9 +404,17 @@ a{
     height: auto;
     padding-bottom: 50px;
 }
+.midSection h2 {
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 3.75rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
 .content{
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: var(--responsive-width);
@@ -494,8 +514,6 @@ a{
     margin: 0 auto;
     width: 100%;
     min-height: 30vh;
-    border-bottom: 1px solid var(--main-border-color);
-    border-top: 1px solid var(--main-border-color);
 }
 .faq-container {
     width: var(--responsive-width);
@@ -503,10 +521,10 @@ a{
     padding: 10px;
     border-radius: 8px;
 }
-.faq-container h1 {
+.faq-container h2 {
     text-align: center;
     color: var(--main-text-color);
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
     font-size: 4rem;
 }
 .faq-item {
@@ -546,10 +564,11 @@ a{
 .howto{
     width: 100%;
     height: auto;
-    padding: 50px 0;
+    padding: var(--padding-section);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 5vh;
 }
 .howtoContent{
     width: var(--responsive-width);
@@ -558,14 +577,15 @@ a{
     align-items: center;
     flex-direction: column;
     text-align: center;
-    /* padding: 0 50px; */
-    /* border: 1px solid var(--main-border-color); */
     background-color: transparent;
     font-size: var(--responsive-title);
 }
 .howtoContent h2{
-    /* margin-bottom: 50px; */
-    width: 60vw;
+    text-align: center;
+    color: var(--main-text-color);
+    margin-bottom: 3.75rem;
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 .howtoContent p{
     color: var(--main-text-color2);
@@ -578,17 +598,18 @@ a{
     text-align: center;
     font-size: 0.75rem;
     color: var(--main-text-color2);
+    text-transform: uppercase;
 }
 .howcontent{
     width: auto;
     height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     margin: 100px 0 25px;
 }
 .step{
-    width: auto;
+    width: 25%;
     /* height: 400px; */
     display: flex;
     flex-direction: column;
@@ -622,12 +643,14 @@ a{
     align-items: center;
     text-align: center;
     font-size: var(--responsive-title);
-    padding: 50px 0;
+    padding: 10vh 0;
 }
 .column-content2 h2{
-    width: 60vw;
-    letter-spacing: -0.05em;
-    padding-bottom: 60px;
+    text-align: center;
+    /* color: var(--main-text-color); */
+    margin-bottom: 60px;
+    font-size: 4rem;
+    text-transform: uppercase;
 }
 .column-content2 p {
     width: 50vw;
@@ -638,7 +661,7 @@ a{
     color: var(--main-bg-color1);
 }
 .column-content2 button{
-    margin: 0 auto;
+    margin: 5vh auto 0;
 }
 /* footer */
 footer{

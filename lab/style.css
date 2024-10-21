@@ -319,3 +319,15 @@ header .logo{
 .typoContainer.open .material-symbols-outlined, .sizeContainer.open .material-symbols-outlined, .spacingContainer.open .material-symbols-outlined, .backgroundContainer.open .material-symbols-outlined, .borderContainer.open .material-symbols-outlined, .positionContainer.open .material-symbols-outlined {
     transform: rotate(0deg); /* Rotation de l'icône quand le menu est déplié */
 } 
+
+/*  */
+
+
+.gjs-block-section, .gjs-block-text, .gjs-block-image, .gjs-block-button, .gjs-block-video {
+    padding: 10px;
+    width: auto;
+    
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

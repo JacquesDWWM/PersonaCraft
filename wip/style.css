@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wdth,wght@62.5..100,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto-Sans-Georgian', Arial, Helvetica, sans-serif;
+        /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+    font-size: 1rem;
+    background: linear-gradient(0deg, #111113 50%, #0c111c 75%, #172448 100%);
+    color: #B2B3BD;
+    flex-direction: column;
+    overflow: hidden;
+}
+.blue{
+    color: #93B4FF;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+    color: #eeeef0;
+}
+nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding-left: 15px;
+    background-color: transparent;
+    align-items: center;
+    gap: 20px;
+}
+nav h1{
+    font-size: 2rem;
+    width: fit-content;
+    font-weight: lighter;
+    color: #eeeef0;
+    cursor: pointer;
+    height: auto;
+    transition: all 0.2s ease-in-out;
+}
+#wip {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.wip-content{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    font-size: 4em;
+}
+#subtitle{
+    width: 100%;
+    font-size: 2rem;    
+}
+.wip-content h2{
+    color: #eeeef0;
+    width: 60%;
+    letter-spacing: -0.05em;
+    text-align: center;
+}
+.wip-content h3{
+    width: 50%;
+    font-weight:100;
+    font-size: 1.25rem;
+    text-align: left;
+}
+#sending{
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    background-color: hsla(240, 6%, 7%, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid #393A40;
+    margin: auto;
+}
+#sending:focus-within{
+    border: 1px solid #3D63DD;
+}
+input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px 0 10px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #B2B3BD;
+}
+input:focus{
+    outline: none;
+    color: #eeeef0;
+}
+button{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #393A40;
+    background-color: transparent;
+    color: #eeeef0;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+}
+button:hover{
+    background: linear-gradient(to left top, #172448, #18203e, #181d33, #17192a, #151620, #151620, #151620, #151620, #17192a, #181d33, #18203e, #172448);
+    border-color: #3D63DD;
+    color: #3D63DD;
+    transform: scale(1.02);
+}
+#badge{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px;
+    background: linear-gradient(to left top, #172448, #18203e, #181d33, #17192a, #151620, #151620, #151620, #151620, #17192a, #181d33, #18203e, #172448);
+    border: 3px double #3D63DD;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.8rem;
+    text-transform:uppercase;
+    right: 20px;
+    user-select: none;
+}
+#wip-band{
+    width: 400px;
+    height: auto;
+    background-color: #eeeef0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 50px;
+    right: -120px;
+    transform: rotate(45deg);
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+    font-size: 1em;
+    border: 3px solid red;
+    user-select: none;
+    box-shadow: 10px 10px 30px #111113;
+}
+
+
+
+
+
+
+@media screen and (max-width: 480px){
+    body {
+        height: 100%;
+        overflow-y: auto;
+        width: auto;
+    }
+    
+    nav {
+        margin-bottom: 150px;
+    }
+    
+    nav h1 {
+        font-weight: 400;
+    }
+    
+    .wip-content {
+        font-size: 2.2em;
+        height: auto;
+        display: flex;
+        gap: 100px;
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .wip-content h2 {
+        letter-spacing: -0.05em;
+        width: 80%;
+    }
+    
+    .wip-content h3 {
+        width: 80%;
+    }
+    
+    #badge {
+        position: absolute;
+        bottom: -345px;
+    }
+    
+    #wip-band {
+        position: absolute;
+    }
+    
+    #sending {
+        margin-bottom: 150px;
+        text-overflow: ellipsis;
+        height: 100%;
+        width: 80%;
+    }
+    }
