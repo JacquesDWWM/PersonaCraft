@@ -27,7 +27,7 @@
     /* border: 1px solid red; */
 }
 body{
-    background-color: var(--main-bg-color1);
+    /* background-color: var(--main-bg-color1); */
     height: 100%;
     width: 100%;
     display: flex;
@@ -163,6 +163,7 @@ a{
     font-size: var(--responsive-title);
 }
 .column-content1 h2{
+    width: 80%;
     width: 60vw;
     text-align: left;
     margin: 0 auto;
@@ -182,7 +183,6 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh;
     padding: var(--padding-section);
 }
 
@@ -259,7 +259,7 @@ a{
     text-align: center;
     color: var(--main-text-color);
     margin-bottom: 3.75rem;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 .content1{
@@ -335,23 +335,26 @@ a{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: var(--responsive-width);
+    width: 100%;
     margin: 0 auto;
     height: auto;
     padding: var(--padding-section);
     gap: 50px;
+    border-radius: 0 0 25px 25px;
+    background-color: var(--main-bg-color1);
     /* border-top: 1px solid var(--main-border-color); */
 }
 .avisSection h2{
     text-align: center;
-    color: var(--main-text-color);
     margin-bottom: 3.75rem;
-    font-size: 4rem;
+    color: var(--main-text-color);
+    font-size: 3rem;
     text-transform: uppercase;
 }
 .avisContent{
     display: flex;
     justify-content: space-between;
+    width: var(--responsive-width);
 }
 .avisCard{
     width: 45%;
@@ -397,18 +400,19 @@ a{
 }
 /* Section offres */
 .midSection{
-    background-color: var(--main-bg-color);
+    background-color: var(--main-bg-color1);
     display: flex;
     justify-content: center;
     width: 100%;
     height: auto;
     padding-bottom: 50px;
+    border-radius: 25px 25px 0 0;
 }
 .midSection h2 {
     text-align: center;
-    color: var(--main-text-color);
     margin-bottom: 3.75rem;
-    font-size: 4rem;
+    color: var(--main-text-color);
+    font-size: 3rem;
     text-transform: uppercase;
 }
 .content{
@@ -419,8 +423,8 @@ a{
     align-items: center;
     width: var(--responsive-width);
     height: auto;
-    padding: 65px 0 10px;
-    gap: 50px;
+    padding: var(--padding-section);
+    /* gap: 50px; */
 }
 .offres .content{
     width: 100%;
@@ -434,7 +438,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: var(--responsive-width);
+    width: 100%;
     height: auto;
     gap: 20px;
     border-radius: 20px;
@@ -445,7 +449,7 @@ a{
     height: 100%;
 }
 .offerCard{
-    width: 25%;
+    width: 100%;
     border-radius: 5px;
     height: auto;
     padding-bottom: 25px;
@@ -458,7 +462,7 @@ a{
     width: 100%;
     height: 50px;
     border-radius: 5px 5px 0 0;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     background-color: var(--button-color);
     color: var(--main-text-color);
 }
@@ -468,7 +472,7 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     flex-direction: column;
     line-height: 0.6em;
 }
@@ -514,6 +518,8 @@ a{
     margin: 0 auto;
     width: 100%;
     min-height: 30vh;
+    border-radius: 0 0 25px 25px;
+    background-color: var(--main-bg-color1);
 }
 .faq-container {
     width: var(--responsive-width);
@@ -525,7 +531,7 @@ a{
     text-align: center;
     color: var(--main-text-color);
     margin-bottom: 3.75rem;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 .faq-item {
     border-bottom: 1px solid #dddddd;
@@ -569,6 +575,7 @@ a{
     justify-content: center;
     align-items: center;
     gap: 5vh;
+    background-color: var(--main-bg-color1);
 }
 .howtoContent{
     width: var(--responsive-width);
@@ -584,7 +591,7 @@ a{
     text-align: center;
     color: var(--main-text-color);
     margin-bottom: 3.75rem;
-    font-size: 4rem;
+    font-size: 3rem;
     text-transform: uppercase;
 }
 .howtoContent p{
@@ -647,7 +654,6 @@ a{
 }
 .column-content2 h2{
     text-align: center;
-    /* color: var(--main-text-color); */
     margin-bottom: 60px;
     font-size: 4rem;
     text-transform: uppercase;
@@ -1336,21 +1342,22 @@ footer .footerContent div{
     .column-content1{
         display: flex;
         width: 100%;
-        margin-top: 125px;
+        height: 100vh;
+        margin: auto;
         height: fit-content;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 20px;
-        font-size: 2.5em;
-        padding: 10px;
+        font-size: 2em;
+        padding: 0 10vw;
     }
     .column-content1 h2{
         width: 100%;
         text-align: center;
         margin: 0 auto;
         letter-spacing: -0.05em;
+        text-transform: uppercase;
     }
     .column-content1 p{
         width: 90%;
@@ -1361,11 +1368,11 @@ footer .footerContent div{
     .media{
         background: var(--main-bg-color1);
         width: 100%;
-        height: 190px;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 100px 0 40px;    
+        padding: var(--padding-section);
     }
     .representation{
         width: 100%;
@@ -1380,59 +1387,16 @@ footer .footerContent div{
         align-items: center;
         box-shadow: var(--button-color-hover-shadow);
     }
-    /* section trust proof / logos */
-    .trustProof{
-        background-color: var(--main-bg-color1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 15vh;
-        overflow: hidden;
-        white-space: nowrap;
-        box-sizing: border-box;
-        z-index: 1;
-    }
-    .proof{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        width: 100%;
-        display: inline-block;
-        padding-left: -100%;
-    }
-    .proof span{
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .proof span img{
-        width: 75%;
-        height: 75%;
-    }
-    .proofCard{
-        width: 150px;
-        height: 50px;
-        animation: proof 6s linear infinite;
-    }
-    @keyframes proof{
-        from{
-            transform: translateX(0);
-        }
-        to{
-            transform: translateX(-100%);
-        }
-    }
     /* section avantages */
     .midSection1{
         background-color: var(--main-bg-color1);
         display: flex;
         justify-content: center;
-        /* width: 100%; */
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         margin: 0 auto;
-        padding: 10px;
+        padding: 0 10vw;
+        font-size: 2em;
     }
     .content1{
         display: flex;
@@ -1445,15 +1409,17 @@ footer .footerContent div{
         gap: 20px;
     }
     .card{
-        background-color: var(--main-bg-color1);
+        /* background-color: var(--main-bg-color1); */
+        background: -webkit-linear-gradient(45deg, #111113,#111113,#f2f4fd33);
+        background: linear-gradient(45deg, rgb(17, 17, 19, 1),rgb(17, 17, 19, 1),rgb(242, 244, 253, 0.1));
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        width: 400px;
+        width: auto;
         height: auto;
         text-align: left;
-        padding: 15px 25px 25px 25px;
+        /* padding: 15px 25px 25px 25px; */
         line-height: 1.5rem;
         border: 1px solid var(--main-border-color);
         border-radius: 20px;
@@ -1461,14 +1427,16 @@ footer .footerContent div{
         z-index: 2;
         font-size: 1rem;
         transition: all 0.2s ease;
+        gap: 20px;
+
     }
-    .card:hover{
+    /* .card:focus{
         background: -webkit-linear-gradient(45deg, #111113,#111113,#f2f4fd33);
         background: linear-gradient(45deg, rgb(17, 17, 19, 1),rgb(17, 17, 19, 1),rgb(242, 244, 253, 0.1));
         box-shadow: var(--button-color-hover-shadow2);
         z-index: 1;
         transform: scale(1.02);
-    }
+    } */
     .material-symbols-outlined{
         font-size: 60px !important;
         font-weight: bold;
@@ -1508,35 +1476,43 @@ footer .footerContent div{
         align-items: center;
         flex-direction: column;
         width: 100%;
-        margin: 50px auto;
+        margin: 0 auto;
         height: auto;
-        padding: 10px;
-        gap: 20px;
-        /* border-top: 1px solid var(--main-border-color); */
-        font-size: 2.5em;
+        padding: var(--padding-section);
+        font-size: 2em;
     }
     .avisCard h2{
         width: 100%;
         text-align: center;
-        /* margin-bottom: 20px; */
+        margin: 0 auto;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+    }
+    .avisContent{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10vw;
+        gap: 20px;
     }
     .avisCard{
         width: 100%;
-        height: fit-content;
+        height: auto;
         border: 1px solid var(--main-border-color);
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 10px 20px;
+        padding: 20px;
         font-size: 1.5rem;
     }
     .avisCard h3{
-        text-align: right;
+        text-align: center;
         margin-bottom: 20px;
     }
     .avisCard p{
         width: 100%;
-        text-align: right;
+        text-align: center;
         font-size: 1rem;
         line-height: 1.5em;
         color: var(--main-text-color2);
@@ -1594,7 +1570,6 @@ footer .footerContent div{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: var(--responsive-width);
         height: auto;
         flex-wrap: wrap;
         gap: 20px;
@@ -1676,26 +1651,23 @@ footer .footerContent div{
         margin: 0 auto;
         width: 100%;
         min-height: 30vh;
-        border-bottom: 1px solid var(--main-border-color);
-        border-top: 1px solid var(--main-border-color);
-        padding: 10px;
+        padding: 0 10vw;
     }
     .faq-container {
         width: 100%;
         margin: 40px 0;
         padding: 10px;
         border-radius: 8px;
+        font-size: 1.5rem;
     }
-    .faq-container h1 {
+    .faq-container h2 {
+        width: 100%;
         text-align: center;
-        color: var(--main-text-color);
-        margin-bottom: 60px;
-        font-size: 4rem;
-    }
-    .faq-item {
-        border-bottom: 1px solid #dddddd;
-        padding: 15px;
-        /* height: 50px; */
+        margin: 0 auto;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
     }
     .last-item {
         border-bottom: none;
@@ -1704,7 +1676,7 @@ footer .footerContent div{
         width: 100%;
         background: none;
         border: none;
-        font-size: 2rem;
+        font-size: 1.25rem;
         text-align: left;
         color: var(--main-text-color2);
         cursor: pointer;
@@ -1716,8 +1688,8 @@ footer .footerContent div{
     .faq-answer {
         display: none;
         /* text-align: right; */
-        margin-top: 25px;
-        font-size: 1.25rem;
+        margin: 25px 0;
+        font-size: 1rem;
         color: var(--main-text-color2);
         padding-left: 20px;
     }
@@ -1728,24 +1700,31 @@ footer .footerContent div{
     .howto{
         width: 100%;
         height: auto;
-        padding: 50px 0;
+        padding: var(--padding-section);
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .howtoContent{
         width: 100%;
-        padding: 0 10px;
+        padding: 0 10vw;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: transparent;
-        padding: 10px;
-        font-size: 2.5em;
+        text-align: center;
+        /* font-size: 2.5rem; */
     }
     .howtoContent h2{
-        /* margin-bottom: 50px; */
         width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+    }
+    .howtoContent h2 span{
+        display: flex;
+        justify-content: center;
     }
     .howtoContent p{
         color: var(--main-text-color2);
@@ -1764,13 +1743,12 @@ footer .footerContent div{
         height: auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        margin: 100px 0 25px;
     }
     .step{
         width: 100%;
-        /* height: 400px; */
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1782,7 +1760,7 @@ footer .footerContent div{
     .step h3{
         font-size: 1.5rem;
         line-height: 1.5em;
-        text-align: left;
+        text-align: center;
     }
     .step p{
         height: 150px;
@@ -1790,21 +1768,29 @@ footer .footerContent div{
         font-size: 1rem;
         line-height: 1.5em;
         padding: 20px;
+        text-align: center;
     }
     /* Appel à l'action */
     .appelAction{
         background-color: var(--main-text-color);
         width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
-        color: var(--main-bg-color1);
-        font-size: 2.5em;
-        padding: 10px;
+        padding: 10vh 0;
+    }
+    .column-content2{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
     .column-content2 h2{
-        width: 100%;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
         letter-spacing: -0.05em;
-        /* padding-bottom: 60px; */
+        text-transform: uppercase;
+        font-size: 2.5rem;
     }
     .column-content2 p {
         width: 80%;
@@ -1813,10 +1799,8 @@ footer .footerContent div{
         margin: auto;
         color: var(--main-bg-color1);
     }
-    .column-content2 button{
-        margin: 40px auto 20px;
-    }
-    /* footer */
+
+   /* footer */
     footer{
         bottom: 0;
         width: 100%;
@@ -1842,15 +1826,15 @@ footer .footerContent div{
     }
     #menuPopOver{
         width: 100%;
-        height: 100%;
+        height: 100vh;
         background-color: var(--main-bg-color1);
-        position: absolute;
+        position: fixed;
         display: none;
         align-items: center;
         justify-content: center;
-        z-index: 1;
-        overflow-y: none;
+        z-index: 99;
     }
+
     #menuPopOver ul{
         display: flex;
         align-items: center;
