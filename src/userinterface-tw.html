@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
         body{
             font-family: Ubuntu,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,  Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
         #main-content{
-            scrollbar-width: thin;
+            scrollbar-width: none;
             scrollbar-color: transparent transparent;
-            transition: all 0.2s ease-in-out;}
-        #main-content:hover{
-            scrollbar-width: thin;
-            scrollbar-color: rgb(147 197 253) transparent;
+            transition: all 0.2s ease-in-out;
         }
     </style>
 </head>
@@ -35,12 +33,13 @@
             </span>
         </div>
         <span class="h-[1px] w-full bg-blue-300 "></span>
-        <div class="flex flex-1 flex-col overflow-y-auto items-center justify-center p-4 mt-2.5 gap-3">
-            <div>
-                <span class="w-full relative flex items-center justify-center">test</span>
-                <span class="w-full relative flex items-center justify-center">test</span>
-                <span class="w-full relative flex items-center justify-center">test</span>
-                <span class="w-full relative flex items-center justify-center">test</span>
+        <div class="flex flex-1 flex-col overflow-y-auto  p-4 mt-2.5 gap-3">
+            <div class="w-full h-full pl-6 gap-10">
+                <span class="w-full text-xl font-semibold relative flex items-center"><a href="#general" position="top">General</a></span>
+                <span class="w-full text-xl font-semibold relative flex items-center"><a href="#personal">Personal</a></span>
+                <span class="w-full text-xl font-semibold relative flex items-center"><a href="#account">Account</a></span>
+                <span class="w-full text-xl font-semibold relative flex items-center"><a href="#subscription">Subscription</a></span>
+                <span class="w-full text-xl font-semibold relative flex items-center"><a href="#billing">Billing</a></span>
             </div>
         </div>
         <span class="h-[1px] w-full bg-blue-300 "></span>
@@ -55,64 +54,143 @@
 </div>
     <main class="h-full flex flex-1 flex-col max-lg:pb-0 lg:pl-64 lg:pr-2 xl:py-2 rounded-2xl ">
         <div class="h-full overflow-y-hidden flex grow p-6 lg:rounded-lg lg:p-10 bg-blue-200 border border-blue-300">
-            <div id="main-content" class="mx-auto max-w-6xl overflow-y-scroll">
-                <form class="max-w-4xl" method="post">
-                <h1 class="w-fulltext-3xl/8 font-semibold text-black">Tableau de bord</h1>
-                <hr class="my-10 mt-6 w-full border-t border-blue-300">
-                
-                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:grid-rows-2">
-                    <h2 class="w-full font-semibold text-2xl mb-5 col-span-2">Mes sites</h2>
+            <div id="main-content" class="grow mx-auto max-w-6xl overflow-y-scroll">
+                <form class="mx-auto max-w-5xl" method="post">
+                <h1 class="w-full text-3xl font-semibold text-black max-lg:text-center hidden">PersonaCraft's Dashboard</h1>
+                <h2 id="general" class="font-semibold text-3xl mb-16">General</h2>
+                <!-- <hr class="my-10 mt-6 w-full border-t border-blue-300"> -->
+                <section  class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="space-y-1">
-                        <h2 class="font-semibold row-span-2">Mes sites</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                        <h2 class="font-semibold">Company's name</h2>
+                        <p class="text-base text-gray-500">The name of your company.</p>
                     </div>
-                    <div><span><input type="text"></span></div>
+                    <div>
+                        <span class="relative block w-full" ><input type="text" placeholder="Company's name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black"></span>
+                    </div>
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Description</h2>
+                        <p class="text-base text-gray-500">Some words about your company.</p>
+                    </div>
+                    <div>
+                        <span class="relative block w-full" ><textarea maxlength="255" name="description" placeholder="Description of the company"  rows="5" class="w-full h-auto p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 resize-none hover:resize-y"></textarea></span>
+                    </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
-                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:grid-rows-2">
-                    <h2 class="w-full font-semibold text-2xl mb-5 col-span-2">Mes sites</h2>
+                <h2 id="personal" class="font-semibold text-3xl mb-16">Personal</h2>
+                <section  class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="space-y-1">
-                        
-                        <h2 class="font-semibold">Mon profil</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                        <h2 class="font-semibold">Name</h2>
+                        <p class="text-base text-gray-500">This is your name for PersonaCraft.</p>
                     </div>
-                    <div><span><input type="text"></span></div>
-                </section>
-                <hr class="my-10 w-full border-t border-blue-300">
-                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-                    <div class="space-y-1">
-                        <h2 class="font-semibold">Mon profil</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    <div>
+                        <span class="grid grid-cols-2" >
+                            <input type="text" placeholder="First Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input type="text" placeholder="Last Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                        </span>
                     </div>
-                    <div><span><input type="text"></span></div>
-                </section>
-                <hr class="my-10 w-full border-t border-blue-300">
-                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
-                    <div class="space-y-1">
-                        <h2 class="font-semibold">Mon profil</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
-                    </div>
-                    <div><span><input type="text"></span></div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
                 <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="space-y-1">
-                        <h2 class="font-semibold">Mon profil</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                        <h2 class="font-semibold">Address</h2>
+                        <p class="text-base text-gray-500">Where your organization is registered.</p>
                     </div>
-                    <div><span><input type="text"></span></div>
+                    <div>
+                        <span class="relative block w-full" >
+                            <input type="text" placeholder="Street adress" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input type="text" placeholder="City" class="w-full p-2 rounded border  border-blue-300 outline-none hover:border-blue-500 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <span class="grid grid-cols-2">
+                            <input type="text" placeholder="Postal code" class="w-full p-2 text-ellipsis rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input type="text" placeholder="Appt, Bat, Suite, etc." class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
+                        </span>
+                            <input type="text" placeholder="Country" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
+                        </span>
+                    </div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <h2 id="account" class="font-semibold text-3xl mb-16">Account</h2>
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Login email</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Email you used to sign in.</p>
+                    </div>
+                    <div>
+                        <span class="relative block w-full" ><input type="text" placeholder="Email" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                    </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
                 <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="space-y-1">
-                        <h2 class="font-semibold">Mon profil</h2>
-                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                        <h2 class="font-semibold">Login password</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Password you used to sign in.</p>
                     </div>
-                    <div><span><input type="text"></span></div>
+                    <div>
+                        <span class="relative block w-full" ><input type="text" placeholder="Password" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="relative block w-full"><button action="none" class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 hover:text-white focus:bg-blue-400">Change password</button></span>
+                    </div>
+                    <div>
+                        <span class="grid grid-cols-2">
+                            <input type="password" placeholder="New password" class="w-full p-2 text-ellipsis rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input type="password" placeholder="Confirm password" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
+                        </span>
+                    </div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <h2 id="subscription" class="font-semibold text-3xl mb-16">Subscription</h2>
+                <section  class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Plan</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">This is the plan you selected for your subscription.</p>
+                    </div>
+                    <div>
+                        <span class="relative block w-full" ><input type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                    </div>
+                    <div class="space-y-1">
+                        <span class="relative block w-full"><button action="none" class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 hover:text-white focus:bg-blue-400">Change plan</button></span>
+                    </div>
+                    <div>
+                        <span class="grid">
+                            <select name="subscriptionPlan" id="subscriptionPlan" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500">
+                                <option value="">Student Plan</option>
+                                <option value="">Craftor Plan</option>
+                                <option value="">Companion Plan</option>
+                                <option value="">Master Plan</option>
+                            </select>
+                        </span>
+                    </div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <h2 id="billing" class="font-semibold text-3xl mb-16">Billing</h2>
+                <section  class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Billing email</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">For receive your invoice.</p>
+                    </div>
+                    <div>
+                        <span class="relative block w-full" ><input type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                    </div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Payment Method</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Favorite way to pay</p>
+                    </div>
+                    <div>
+                        <span class="grid">
+                            <select name="subscriptionPlan" placeholder="Choose a payment method" id="subscriptionPlan" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500">
+                                <option value="">Choose a payment method</option>
+                                <option value="">Credit Card</option>
+                                <option value="">Paypal</option>
+                            </select>
+                        </span>
+                    </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
                 <div class="flex justify-end items-center gap-4">
-                    <button class="px-10 py-5">Cancel</button><button>Save Change</button>
+                    <button class="px-5 py-1 font-semibold rounded text-black transition ease-in-out hover:bg-gray-400">Cancel</button><button class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 text-white">Save Change</button>
                 </div>
             </form>
             </div>
