@@ -21,6 +21,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// --------------------------------------------------------------------------------
+// Rajout d'animations sur les sections avec Observer API
+
+// Sélectionne tous les éléments à observer (par exemple, des sections avec une classe spécifique)
+const elements = document.querySelectorAll('.animatable');
+
+// Crée un nouvel IntersectionObserver
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Ajoute une classe pour animer l'élément
+      entry.target.classList.add('visible');
+      // Optionnel : arrête d'observer une fois l'animation lancée
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  // Paramètres de l'observation
+  root: null, // Observe par rapport à la fenêtre
+  rootMargin: '0px',
+  threshold: 0.3 // Déclenche à 30% de visibilité
+});
+
+// Applique l'observateur à chaque élément
+elements.forEach(element => observer.observe(element));
+
+
+
+
+
+
+
+
 
 const menuPopOver = document.getElementById('menuPopOver');
 const burger = document.getElementById('burger');

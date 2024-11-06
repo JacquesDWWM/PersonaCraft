@@ -50,7 +50,11 @@ body{
     background-color: var(--button-color-hover);
     /* box-shadow: var(--button-color-hover-shadow); */
 }
-input[type="text"]{
+#deleteAccount{
+    background-color: red;
+    padding: 5px 10px;
+}
+input[type="text"], input[type="password"]{
     width: 100%;
     padding: 10px;
     border: 1px solid #6C6E79;
@@ -59,11 +63,11 @@ input[type="text"]{
     color: #B2B3BD;
     margin-bottom: 40px;
 }
-input[type="text"]:focus{
+input[type="text"]:focus, input[type="password"]{
     outline: 1px solid var(--button-color);
     color: var(--main-text-color);
 }
-input[type="text"]:hover{
+input[type="text"]:hover, input[type="password"]{
     outline: 1px solid var(--button-color);
 }
 .navbar{

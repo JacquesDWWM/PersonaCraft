@@ -1,6 +1,7 @@
 // Récupérer le token JWT depuis localStorage
 const token = localStorage.getItem('token');
 
+
 // Vérifier si le token existe
 if (!token) {
   alert('Vous devez être connecté pour accéder à cette page.');
@@ -147,3 +148,36 @@ document.querySelector('.save').addEventListener('click', async () => {
 document.querySelector('.cancel').addEventListener('click', () => {
   fetchProfileData();  // Recharger les données actuelles depuis la base de données
 });
+
+
+// --------------------------------------------------------------------------------
+
+// Supprimer mon compte
+
+// Sélectionner le bouton de suppression
+// document.querySelector('#deleteAccount').addEventListener('click', async () => {
+//   if (confirm('Êtes-vous sûr de vouloir supprimer votre compte ?')) {
+//       try {
+//           const response = await fetch(`http://localhost:3000/user/delete-account`, {
+//               method: 'DELETE',
+//               headers: {
+//                   'Authorization': `Bearer ${localStorage.getItem('token')}`,
+//                   'Content-Type': 'application/json'
+//               }
+//           });
+
+//           if (response.ok) {
+//               alert('Votre compte a été supprimé avec succès.');
+//               // Rediriger vers la page de connexion ou d'accueil après suppression
+//               window.location.href = '/login'; // ou '/home' selon ton choix
+//           } else {
+//               const error = await response.json();
+//               alert(error.message || 'Erreur lors de la suppression du compte');
+//           }
+//       } catch (error) {
+//           console.error('Erreur lors de la suppression du compte :', error);
+//           alert('Une erreur est survenue, veuillez réessayer plus tard.');
+//       }
+//   }
+// });
+

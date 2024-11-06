@@ -3,7 +3,7 @@ const proofContent = document.querySelector('.proof');
 const imgUrl = '../images/utopixia shirt.svg';
 
 function createProofContent() {
-    proofContent.innerHTML = ''; // Réinitialiser le contenu
+    proofContent.innerHTML = ''; // Réinitialise le contenu
     companies.forEach(company => {
         const span = document.createElement('span');
         span.className = 'proofCard';

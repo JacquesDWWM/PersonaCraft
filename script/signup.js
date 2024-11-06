@@ -30,12 +30,16 @@ document.querySelector('#form').addEventListener('submit', async (e) => {
             })
         });
 
+        console.log(response);  
+
         if (!response.ok) {
             const errorData = await response.json();
             throw new Error(errorData.message || 'Erreur dans la requête');
         }
 
         const data = await response.json();
+
+        console.log(data);
 
         // Vérifie que le message de succès est bien reçu du backend
         if (data.message === 'Utilisateur créé avec succès') {
@@ -47,6 +51,6 @@ document.querySelector('#form').addEventListener('submit', async (e) => {
         }
     } catch (error) {
         console.error('Erreur:', error);
-        alert('Erreur lors de l\'inscription');
+        alert('Erreur lors de l\'inscription 2');
     }
 });

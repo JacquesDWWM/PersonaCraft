@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Ubuntu,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,  Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        #main-content{
+            scrollbar-width: thin;
+            scrollbar-color: transparent transparent;
+            transition: all 0.2s ease-in-out;}
+        #main-content:hover{
+            scrollbar-width: thin;
+            scrollbar-color: rgb(147 197 253) transparent;
+        }
+    </style>
+</head>
+<body class="w-screen h-screen bg-[#eeeef0] flex">
+    <div class="w-full h-full overflow-x-hidden">
+    <div class="fixed inset-y-0 left-0 w-64 max-lg:hidden">
+        <nav class="h-full flex flex-col">
+        <div class="flex items-center justify-center p-4 mt-2.5">
+            <span class="w-full relative flex items-center justify-center gap-3">
+                <span><img src="../images/logo-bl.png" alt="" class="w-6 h-6"></span>
+                <span class="text-2xl">PersonaCraft</span>
+            </span>
+        </div>
+        <span class="h-[1px] w-full bg-blue-300 "></span>
+        <div class="flex flex-1 flex-col overflow-y-auto items-center justify-center p-4 mt-2.5 gap-3">
+            <div>
+                <span class="w-full relative flex items-center justify-center">test</span>
+                <span class="w-full relative flex items-center justify-center">test</span>
+                <span class="w-full relative flex items-center justify-center">test</span>
+                <span class="w-full relative flex items-center justify-center">test</span>
+            </div>
+        </div>
+        <span class="h-[1px] w-full bg-blue-300 "></span>
+
+        <div class="flex items-center justify-center p-4 mt-2.5">
+            <span class="w-full relative flex items-center justify-center gap-3">
+                <span><img src="../images/logo-bl.png" alt="" class="w-6 h-6"></span>
+                <span class="text-2xl">PersonaCraft</span>
+            </span>
+        </div>
+    </nav>
+</div>
+    <main class="h-full flex flex-1 flex-col max-lg:pb-0 lg:pl-64 lg:pr-2 xl:py-2 rounded-2xl ">
+        <div class="h-full overflow-y-hidden flex grow p-6 lg:rounded-lg lg:p-10 bg-blue-200 border border-blue-300">
+            <div id="main-content" class="mx-auto max-w-6xl overflow-y-scroll">
+                <form class="max-w-4xl" method="post">
+                <h1 class="w-fulltext-3xl/8 font-semibold text-black">Tableau de bord</h1>
+                <hr class="my-10 mt-6 w-full border-t border-blue-300">
+                
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:grid-rows-2">
+                    <h2 class="w-full font-semibold text-2xl mb-5 col-span-2">Mes sites</h2>
+                    <div class="space-y-1">
+                        <h2 class="font-semibold row-span-2">Mes sites</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2 sm:grid-rows-2">
+                    <h2 class="w-full font-semibold text-2xl mb-5 col-span-2">Mes sites</h2>
+                    <div class="space-y-1">
+                        
+                        <h2 class="font-semibold">Mon profil</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Mon profil</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Mon profil</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Mon profil</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <section class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+                    <div class="space-y-1">
+                        <h2 class="font-semibold">Mon profil</h2>
+                        <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Texte de base pour tester la mise en page</p>
+                    </div>
+                    <div><span><input type="text"></span></div>
+                </section>
+                <hr class="my-10 w-full border-t border-blue-300">
+                <div class="flex justify-end items-center gap-4">
+                    <button class="px-10 py-5">Cancel</button><button>Save Change</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

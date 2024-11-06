@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index | PersonaCraft</title>
     <meta name="description" content="Créer un site web pour son entreprise n'a jamais été aussi simple comme bonjour ! Grâce à PersonaCraft, profitez d'une interface créée par nos soins pour vous faciliter la conception sans code.">
     <meta name="keywords" content="personacraft, persona, craft,  interface, web, site, entreprise, conception, code, créer">
@@ -18,32 +18,32 @@
 </head>
 <body>
     <!-- corps du body -->
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="menu">
+                <div class="logo"><a href="./index.html">PersonaCraft</a></div>
+                <span id="burger" class="material-symbols-outlined">menu</span>
+                <ul>
+                    <li><a href="./tarifs.html">Tarifs</a></li>
+                    <li><a href="#">Documentation</a></li>
+                </ul>
+        </div>
+        <div id="auth-buttons">
+            <a href="./signin.html"><button class="button">Se connecter</button></a><a href="./signup.html"><button class="button">S'inscrire</button></a>
+            
+        </div>
+        <div id="dashboard-button">
+            <a href="./userinterface.html"><button class="button">Mon dashboard</button></a>
+        </div>
+        <div id="admin-button">
+            <a href="./admin.html"><button class="button">/!\ ADMIN ONLY /!\</button></a>
+        </div>
+        </div>
+    </nav>
         <!-- section hero / main section -->
-        <section class="heroSection">
-            <!-- navbar -->
-            <nav class="navbar">
-                <div class="menu">
-                        <div class="logo"><a href="./index.html">PersonaCraft</a></div>
-                        <span id="burger" class="material-symbols-outlined">menu</span>
-                        <ul>
-                            <li><a href="./tarifs.html">Tarifs</a></li>
-                            <li><a href="#">Documentation</a></li>
-                        </ul>
-                </div>
-                <div id="auth-buttons">
-                    <a href="./signin.html"><button class="button">Se connecter</button></a><a href="./signup.html"><button class="button">S'inscrire</button></a>
-                    
-                </div>
-                <div id="dashboard-button">
-                    <a href="./userinterface.html"><button class="button">Mon dashboard</button></a>
-                </div>
-                <div id="admin-button">
-                    <a href="./admin.html"><button class="button">/!\ ADMIN ONLY /!\</button></a>
-                </div>
-                </div>
-            </nav>
+        <section class="heroSection animatable">
             <!-- contenu premier section -->
-            <div class="column-content1">
+            <div class="column-content1 ">
                 <h2>Façonne l'internet de <span class="underline blue">demain </span> en quelques clics.</h2>
                 <p class="grey"><br>Et si on te disait que pour construire le futur du web, tu ne dois pas changer tes habitudes ? PersonaCraft delivre un code propre pour un déploiement immédiat et décentralisé.</p>
                 <a href="../lab/index.html"><button class="button">Créer ton site personnalisé dès maintenant !</button></a>
@@ -51,19 +51,16 @@
         </section>
         <!-- section media explicatif -->
         <section class="media">
-            <div class="representation"></div>
+            <div class="representation animatable"></div>
         </section>
-
-        <!-- section trust proof / logos 
-        <section class="trustProof">
+        <!-- section trust proof / logos (partie dynamique) -->
+        <!-- <section class="trustProof">
             <div class="proof">
             </div>
-        </section>
-        -->
-
+        </section> -->
         <!-- section comment ça marche -->
         <section class="howto">            
-            <div class="howtoContent">
+            <div class="howtoContent animatable">
                 <h2>Comment <span class="blue">PersonaCraft</span> fonctionne ?</h2>
                 <div class="howcontent">
                     <div class="step">
@@ -94,9 +91,9 @@
             </div>
         </section>
         <!-- section avantages -->
-        <section class="midSection1">
+        <section class="midSection1 animatable">
             <h2>Les Avantages</h2>
-            <div class="content1">
+            <div class="content1 animatable">
                 <div class="card"><span class="material-symbols-outlined ico">hand_gesture</span>
                 <p>Grâce à PersonaCraft, créer un site web pour son entreprise n'a jamais été aussi simple comme bonjour !</p> <p>Pour en savoir plus, cliquez <a href="#">ici</a>.</p></div>
                 <div class="card"><span class="material-symbols-outlined ico">rocket_launch</span><p>Hébergement de vos sites sur notre blockchain en quelques clics. Nous avons mis l'accens sur l'optimisation de la sécurité et la fiabilité des données.</p><p>Pour en savoir plus, cliquez <a href="#">ici</a>.</p></div>
@@ -104,7 +101,7 @@
             </div>
         </section>
         <!-- section avis clients -->
-        <section class="avisSection">
+        <section class="avisSection animatable">
             <h2>Nos Avis clients</h2>
             <div class="avisContent">
             <div class="avisCard">
@@ -140,7 +137,7 @@
         </div>
         </section>
         <!-- section appel à l'action -->
-        <section class="appelAction">
+        <section class="appelAction animatable">
             <div class="column-content2">
                 <h2>Commence dès <span class="underline blue">maintenant</span> !</h2>
                 <p class="grey">Le futur du web n'attend plus. Il commence avec toi, ici et maintenant. Prends part à la création de l'Internet de demain, simplement, sans complexité technique.</p>
@@ -148,7 +145,7 @@
             </div>
         </section>        
         <!-- section offre -->
-        <section class="midSection">
+        <section class="midSection animatable">
             
             <div class="content">
                 <h2>Nos offres</h2>
@@ -214,7 +211,7 @@
             </div>
         </section>
         <!-- section faq -->
-        <section class="faqSection">
+        <section class="faqSection animatable">
             <div class="faq-container">
                 <h2>F.A.Q.</h2>
                 
@@ -248,7 +245,7 @@
             </div>   
         </section>
         <!-- section appel à l'action -->
-        <section class="appelAction">
+        <section class="appelAction animatable">
             <div class="column-content2">
                 <h2>Rejoins-nous <span class="underline blue">maintenant</span> !</h2>
                 <p class="grey">Essaye PersonaCraft autant que tu le souhaites et rejoins nous dans cette merveilleuse aventure.<br>
@@ -259,13 +256,13 @@
         <!-- section footer -->
         <footer>
             <div class="footerContent">
-                <div><p><a href="#">Gestion des cookies</a></p>
-                <p><a href="#">Politique de confidentialité</a></p>
-                <p><a href="#">Mentions légales</a></p></div>
-                <p>© 2024 PersonaCraft by Utopixia</p>
+                <div><p id="cookies"><a href="#">Gestion des cookies</a></p>
+                <p id="conf"><a href="#">Politique de confidentialité</a></p>
+                <p id="mentions"><a href="#">Mentions légales</a></p></div>
+                <p id="mark">© 2024 PersonaCraft by Utopixia</p>
             </div>
         </footer>
-        <!-- popup menu responsive -->
+        <!-- sidemenu responsive -->
         <div id="menuPopOver">
             <ul>
                 <li>Tarifs</li>
@@ -274,7 +271,15 @@
                 <li class="button"><a href="./signup.html">S'inscrire</li>
                 <li class="button" id="dashboard-button"><a href="./userinterface.html">Mon dashboard</li>
                 <li class="button" id="admin-button"><a href="./admin.html">/!\ ADMIN ONLY /!\</li>
+                    <li><a href="#">Gestion des cookies</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Mentions légales</a></p></li>
+                    <li>© 2024 PersonaCraft by Utopixia</li>
             </ul>
         </div>
 </body>
 </html>
+
+<div class="md:max-xl:flex">
+    <!-- ... -->
+</div>

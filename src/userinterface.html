@@ -94,7 +94,7 @@
                         <div>
                             <h4>Nom d'utilisateur:*</h4>
                             <input type="text" id="nom-utilisateur" name="nom-utilisateur" placeholder="Nom complet">
-                            <span class="note">Pseudonyme affiché sur ton profil public et privé</span>
+                            <span >Pseudonyme affiché sur ton profil public et privé</span>
                         </div>
                         <div>
                             <h4>Avatar:*</h4>
@@ -127,8 +127,15 @@
                 </div>
                 <div id="account-setting" class="content-section">
                     <div class="content-section-head">
-                        <h2 class="content-section-title">compte</h2>
+                        <h2 class="content-section-title">Mon compte</h2>
                         <button class="save button"><span class="material-symbols-outlined">save</span></button>
+                    </div>
+                    <div class="content-section-content">
+                        <h4>Mail de connexion :</h4>
+                        <input type="text" id="email" name="email" placeholder="Email">
+                        <h4>Mot de passe :</h4>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe">
+                        <button id="deleteAccount" class="button">Supprimer mon compte</button>
                     </div>
                 </div> 
                 <!-- Paramètres -->
@@ -152,7 +159,7 @@
                         <h4>Paramètres de facturation</h4>
                         <div>
                             <label for="">Email de facturation :</label>
-                            <input type="email" id="email-facturation" name="email-facturation" placeholder="Email de facturation">
+                            <input type="text" id="email-facturation" name="email-facturation" placeholder="Email de facturation">
                         </div>
                         <div class="separator"></div>
                         <h4>Autres paramètres</h4>
