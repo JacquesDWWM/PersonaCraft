@@ -58,22 +58,18 @@ menuItems.forEach(item => {
         showSection(target);
     });
 });
-
 showSection('content-sites');
 
-// --------------------------------------------------------------------------------
 
+// supprime le token et redirige vers l'index
 document.getElementById('logout').addEventListener('click', (e) => {
     localStorage.removeItem('token');
     window.location.href = './index.html';
 });
 
-// --------------------------------------------------------------------------------
 
-// Récupérer les informations actuelles de l'utilisateur depuis la table profiles
+// récup les infos des users
 async function fetchProfileData() {
-
-
   const token = localStorage.getItem('token');
   const response = await fetch('http://localhost:3000/profile', {
       method: 'GET',
@@ -82,11 +78,9 @@ async function fetchProfileData() {
           'Content-Type': 'application/json'
       },
   });
-
   if (response.ok) {
-    const profile = await response.json();
-    
-    // Pré-remplir les champs du formulaire avec les données actuelles
+    const profile = await response.json();    
+    // pré-rempli le formulaire
     document.getElementById('nom-utilisateur').value = profile.username || '';
     document.getElementById('nom').value = profile.first_name || '';
     document.getElementById('prenom').value = profile.last_name || '';
@@ -101,15 +95,14 @@ async function fetchProfileData() {
 }
 
 
-// Appeler cette fonction lors du chargement de la page pour pré-remplir le formulaire
+// pré-rempli le formulaire au chargement de la page
 fetchProfileData();
 
 // --------------------------------------------------------------------------------
 
-// Gérer la mise à jour des informations du profil
+// Maj des informations du profil
 document.querySelector('.save').addEventListener('click', async () => {
-  const token = localStorage.getItem('token');
-  
+  const token = localStorage.getItem('token');  
   const updatedProfile = {
       username: document.getElementById('nom-utilisateur').value,
       first_name: document.getElementById('nom').value,
@@ -119,17 +112,16 @@ document.querySelector('.save').addEventListener('click', async () => {
       // street_add: document.getElementById('complément-adresse').value,
       city: document.getElementById('ville').value,
       postal_code: document.getElementById('code-postal').value
-  };
-  
+  };  
   const response = await fetch('http://localhost:3000/profile', {
       method: 'PUT',
       headers: {
           'Authorization': `Bearer ${token}`,
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'CSRF-Token': csrfToken,
       },
       body: JSON.stringify(updatedProfile)
   });
-
   if (response.ok) {
       alert('Profil mis à jour avec succès');
       
@@ -140,9 +132,6 @@ document.querySelector('.save').addEventListener('click', async () => {
   }
 });
 
-
-
-// --------------------------------------------------------------------------------
 
 // Réinitialiser les champs à leur état initial (avant modification)
 document.querySelector('.cancel').addEventListener('click', () => {

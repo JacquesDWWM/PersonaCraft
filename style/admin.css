@@ -97,59 +97,48 @@ body {
     justify-content: center;
     margin-top: 50px;
 }
-/* Style pour le tableau des utilisateurs */
+/* Style pour le tableau des users */
 table {
     width: 80%;
-    /* border-collapse: collapse; */
     margin-top: 20px;
-    background-color: #444; /* Couleur de fond du tableau */
-    border: 1px solid #fff; /*Bordure générale */
-    border-radius: 8px; /* Bordures arrondies */
+    background-color: #444;
+    border: 1px solid #fff;
+    border-radius: 8px;
     overflow: hidden;
 }
 table thead {
     height: 50px;
     max-height: 50px;
 }
-/* Style pour les en-têtes du tableau */
 table th {
-    background-color: #3a3a3a; /* Fond des en-têtes */
+    background-color: #3a3a3a;
     color: #ffffff;
     padding: 10px;
     text-align: left;
     font-weight: bold;
     border-bottom: 2px solid #444;
 }
-
-/* Style pour les cellules du tableau */
 table td {
-    /* height: 50px; */
-    /* max-height: 100px; */
     padding: 10px;
-    border-bottom: 1px solid #444; /* Ligne de séparation entre les lignes */
+    border-bottom: 1px solid #444;
 }
-
-/* Style pour les lignes impaires (zebra striping) */
 table tr:nth-child(odd) {
     background-color: #2b2b2b;
 }
-
-/* Style pour les lignes paires */
 table tr:nth-child(even) {
     background-color: #1e1e1e;
 }
-
-/* Style pour les boutons d'action dans le tableau */
 span {
     color: var(--main-text-color2);
     border: 1px solid transparent;
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 4px;
+    background-color: #7c0808;
     transition: background-color 0.3s ease;
 }
-
 span:hover {
+    background-color: #920e0e;
     border: 1px solid #fff;
 }
 

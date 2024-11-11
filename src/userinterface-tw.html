@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../script/userinterface-tw.js" defer></script>
     <style>
         *{
             margin: 0;
@@ -40,6 +41,8 @@
                 <span class="w-full text-xl font-semibold relative flex items-center"><a href="#account">Account</a></span>
                 <span class="w-full text-xl font-semibold relative flex items-center"><a href="#subscription">Subscription</a></span>
                 <span class="w-full text-xl font-semibold relative flex items-center"><a href="#billing">Billing</a></span>
+                <span id="logout"  class="w-full text-xl text-red-500 font-semibold relative flex items-center cursor-pointer">Logout</span>
+
             </div>
         </div>
         <span class="h-[1px] w-full bg-blue-300 "></span>
@@ -65,14 +68,14 @@
                         <p class="text-base text-gray-500">The name of your company.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><input type="text" placeholder="Company's name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black"></span>
+                        <span class="relative block w-full" ><input id="companyName" type="text" placeholder="Company's name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black"></span>
                     </div>
                     <div class="space-y-1">
                         <h2 class="font-semibold">Description</h2>
                         <p class="text-base text-gray-500">Some words about your company.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><textarea maxlength="255" name="description" placeholder="Description of the company"  rows="5" class="w-full h-auto p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 resize-none hover:resize-y"></textarea></span>
+                        <span class="relative block w-full" ><textarea id="description" maxlength="255" name="description" placeholder="Description of the company"  rows="5" class="w-full h-auto p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 resize-none hover:resize-y"></textarea></span>
                     </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
@@ -84,8 +87,8 @@
                     </div>
                     <div>
                         <span class="grid grid-cols-2" >
-                            <input type="text" placeholder="First Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
-                            <input type="text" placeholder="Last Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input id="firstName" type="text" placeholder="First Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input id="lastName" type="text" placeholder="Last Name" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
                         </span>
                     </div>
                 </section>
@@ -97,13 +100,13 @@
                     </div>
                     <div>
                         <span class="relative block w-full" >
-                            <input type="text" placeholder="Street adress" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
-                            <input type="text" placeholder="City" class="w-full p-2 rounded border  border-blue-300 outline-none hover:border-blue-500 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input id="street" type="text" placeholder="Street adress" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input id="city" type="text" placeholder="City" class="w-full p-2 rounded border  border-blue-300 outline-none hover:border-blue-500 focus:border-blue-400 text-gray-500 focus:text-black">
                             <span class="grid grid-cols-2">
-                            <input type="text" placeholder="Postal code" class="w-full p-2 text-ellipsis rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
-                            <input type="text" placeholder="Appt, Bat, Suite, etc." class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
+                            <input id="postalCode" type="text" placeholder="Postal code" class="w-full p-2 text-ellipsis rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
+                            <input id="streetAdd" type="text" placeholder="Appt, Bat, Suite, etc." class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
                         </span>
-                            <input type="text" placeholder="Country" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
+                            <input id="country" type="text" placeholder="Country" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
                         </span>
                     </div>
                 </section>
@@ -115,7 +118,7 @@
                         <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Email you used to sign in.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><input type="text" placeholder="Email" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                        <span class="relative block w-full" ><input id="loginEmail" disabled type="text" placeholder="Email" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
                     </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
@@ -125,12 +128,12 @@
                         <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">Password you used to sign in.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><input type="text" placeholder="Password" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                        <span class="relative block w-full" ><input id="loginPassword" disabled type="password" value="**********" placeholder="Password" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
                     </div>
-                    <div class="space-y-1">
+                    <div class="space-y-1 hidden">
                         <span class="relative block w-full"><button action="none" class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 hover:text-white focus:bg-blue-400">Change password</button></span>
                     </div>
-                    <div>
+                    <div class="hidden">
                         <span class="grid grid-cols-2">
                             <input type="password" placeholder="New password" class="w-full p-2 text-ellipsis rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500 focus:text-black">
                             <input type="password" placeholder="Confirm password" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400">
@@ -138,14 +141,14 @@
                     </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
-                <h2 id="subscription" class="font-semibold text-3xl mb-16">Subscription</h2>
+                <h2  class="font-semibold text-3xl mb-16">Subscription</h2>
                 <section  class="grid gap-x-8 gap-y-6 sm:grid-cols-2">
                     <div class="space-y-1">
                         <h2 class="font-semibold">Plan</h2>
                         <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">This is the plan you selected for your subscription.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><input type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                        <span class="relative block w-full" ><input disabled id="plan" type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
                     </div>
                     <div class="space-y-1">
                         <span class="relative block w-full"><button action="none" class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 hover:text-white focus:bg-blue-400">Change plan</button></span>
@@ -153,6 +156,7 @@
                     <div>
                         <span class="grid">
                             <select name="subscriptionPlan" id="subscriptionPlan" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500">
+                                <option value="">Choose a plan</option>
                                 <option value="">Student Plan</option>
                                 <option value="">Craftor Plan</option>
                                 <option value="">Companion Plan</option>
@@ -169,7 +173,7 @@
                         <p class="text-base/6 text-zinc-500 sm:text-sm/6 dark:text-zinc-400">For receive your invoice.</p>
                     </div>
                     <div>
-                        <span class="relative block w-full" ><input type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
+                        <span class="relative block w-full" ><input id="billingEmail" type="text" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400"></span>
                     </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
@@ -180,17 +184,17 @@
                     </div>
                     <div>
                         <span class="grid">
-                            <select name="subscriptionPlan" placeholder="Choose a payment method" id="subscriptionPlan" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500">
-                                <option value="">Choose a payment method</option>
-                                <option value="">Credit Card</option>
-                                <option value="">Paypal</option>
+                            <select id="paymentMethod" name="subscriptionPlan" placeholder="Choose a payment method" id="subscriptionPlan" class="w-full p-2 rounded border border-blue-300 outline-none hover:border-blue-400 focus:border-blue-400 text-gray-500">
+                                <option value="none">Choose a payment method</option>
+                                <option value="creditCard">Credit Card</option>
+                                <option value="paypal">Paypal</option>
                             </select>
                         </span>
                     </div>
                 </section>
                 <hr class="my-10 w-full border-t border-blue-300">
                 <div class="flex justify-end items-center gap-4">
-                    <button class="px-5 py-1 font-semibold rounded text-black transition ease-in-out hover:bg-gray-400">Cancel</button><button class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 text-white">Save Change</button>
+                    <button id="cancel" type="reset"  class="px-5 py-1 font-semibold rounded text-black transition ease-in-out hover:bg-gray-400">Cancel</button><button id="save" type="button"  class="px-5 py-1 font-semibold rounded text-black transition ease-in-out bg-gray-200 hover:bg-blue-300 text-white">Save Change</button>
                 </div>
             </form>
             </div>
